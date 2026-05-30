@@ -3,7 +3,7 @@
  */
 const GameConfig = {
     // Grid Configuration
-    GRID_SIZE: 9,
+    GRID_SIZE: 7,
     TILE_SIZE: 50,
     GRID_GAP: 2,
     
