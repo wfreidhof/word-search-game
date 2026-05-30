@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Search Game - AlphaBetty Style</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="game-container">
+        <!-- Header with Score and Stats -->
+        <header class="game-header">
+            <div class="header-content">
+                <h1>Word Search Game</h1>
+                <div class="stats-panel">
+                    <div class="stat-item">
+                        <span class="stat-label">Score</span>
+                        <span class="stat-value" id="score">0</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Moves</span>
+                        <span class="stat-value" id="moves">0</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Game Area -->
+        <main class="game-board-container">
+            <div class="current-word-display">
+                <p id="currentWord">Select letters...</p>
+            </div>
+            <canvas id="gameCanvas"></canvas>
+        </main>
+
+        <!-- Action Buttons -->
+        <footer class="game-footer">
+            <button id="clearBtn" class="action-btn btn-secondary">Clear</button>
+            <button id="submitBtn" class="action-btn btn-primary">Submit Word</button>
+            <button id="resetBtn" class="action-btn btn-secondary">New Game</button>
+        </footer>
+    </div>
+
+    <!-- Slot Machine Bonus Modal -->
+    <div id="slotMachineModal" class="modal hidden">
+        <div class="modal-overlay"></div>
+        <div class="modal-content slot-machine-container">
+            <button class="modal-close" id="closeSlotModal">&times;</button>
+            <h2>🎰 BONUS SLOT MACHINE! 🎰</h2>
+            <p class="bonus-message">You found a word longer than 6 letters!</p>
+            
+            <div class="slot-machine">
+                <div class="reel-container">
+                    <div class="reel" id="reel1">🍒</div>
+                    <div class="reel" id="reel2">🍋</div>
+                    <div class="reel" id="reel3">💎</div>
+                </div>
+            </div>
+
+            <div class="slot-controls">
+                <button id="spinBtn" class="action-btn btn-primary spin-btn">SPIN!</button>
+            </div>
+
+            <div id="slotResult" class="slot-result hidden">
+                <p id="resultMessage"></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Feedback Toast Notification -->
+    <div id="toast" class="toast"></div>
+
+    <!-- JavaScript Modules -->
+    <script src="js/config.js"></script>
+    <script src="js/letterPool.js"></script>
+    <script src="js/gameBoard.js"></script>
+    <script src="js/tileManager.js"></script>
+    <script src="js/pathValidator.js"></script>
+    <script src="js/canvas.js"></script>
+    <script src="js/touchHandler.js"></script>
+    <script src="js/wordValidator.js"></script>
+    <script src="js/slotMachine.js"></script>
+    <script src="js/game.js"></script>
+</body>
+</html>
